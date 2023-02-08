@@ -103,7 +103,7 @@ abstract class Feed
         foreach ($storeGroups as $storeGroup) {
             /* @var \Magento\Store\Model\Group $storeGroup */
             /**
-             * Default store, for config and product data 
+             * Default store, for config and product data
              */
             $store = $storeGroup->getDefaultStore();
             try {
@@ -291,7 +291,7 @@ abstract class Feed
         $this->logger->debug('Username '.$params['username']);
 
         /**
-         * @var Sftp $sftp 
+         * @var Sftp $sftp
          */
         $sftp = new Sftp();
         try {
@@ -301,7 +301,7 @@ abstract class Feed
             $this->logger->info('File upload result: '.($result ? 'success!' : 'failure.'));
             if ($result) {
                 /**
-                 * @var \Magento\Framework\Filesystem\Io\File $ioObject 
+                 * @var \Magento\Framework\Filesystem\Io\File $ioObject
                  */
                 $ioObject = $this->filesystem;
                 $sentFile = dirname($sourceFile).'/sent/'.basename($sourceFile);
@@ -310,7 +310,7 @@ abstract class Feed
                 $ioObject->mv($sourceFile, $sentFile);
             }
         } catch (Exception $e) {
-            $this->logger->err($e->getMessage());
+            $this->logger->error($e->getMessage());
         }
     }
 }

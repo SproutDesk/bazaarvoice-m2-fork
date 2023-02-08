@@ -1,20 +1,22 @@
 {
-  "name": "bazaarvoice/bazaarvoice-magento2-ext",
-  "description": "Bazaarvoice Magento 2 Integration Extension.",
-  "type": "magento2-module",
-  "license": [
-    "MIT"
-  ],
-  "version": "9.1.5",
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "bazaarvoice/bazaarvoice-magento2-ext",
+    "description": "Bazaarvoice Magento 2 Integration Extension.",
+    "type": "magento2-module",
+    "license": [
+        "MIT"
     ],
-    "psr-4": {
-      "Bazaarvoice\\Connector\\": ""
+    "version": "9.1.5",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Bazaarvoice\\Connector\\": ""
+        }
+    },
+    "require": {
+        "php": "~7.0||~8.1.0",
+        "magento/framework": "~100.1|~101.0|~102.0|~103.0|~104.0",
+        "phpseclib/phpseclib": "^3.0.0"
     }
-  },
-  "require": {
-    "php": "~7.0||~8.1.0" ,"magento/framework": "~100.1|~101.0|~102.0|~103.0|~104.0"  
-  }
 }
